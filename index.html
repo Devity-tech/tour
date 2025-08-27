@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johnny Depp | Macclesfield UK Tour 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%231a1a1a" x="0" y="0" width="100" height="100"/><path fill="%235e2c2c" opacity="0.2" d="M0 0L100 100M100 0L0 100" stroke-width="0.5"/></svg>');
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #5e2c2c;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Times New Roman', serif;
+            font-size: 32px;
+            font-weight: bold;
+            color: #c89b3c;
+            text-decoration: none;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #c89b3c;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://res.cloudinary.com/ddejbpv1e/image/upload/v1756253457/frxwumud12da4bxomkyf.jpg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #c89b3c;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #5e2c2c;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background: #c89b3c;
+        }
+        
+        /* Tour Date Section */
+        .tour-date {
+            padding: 100px 0;
+            text-align: center;
+            background-color: #111;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+            color: #c89b3c;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .date-card {
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        .date-header {
+            background: #5e2c2c;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .date-header h3 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .date-body {
+            padding: 30px;
+        }
+        
+        .date-body p {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .date-body i {
+            margin-right: 10px;
+            color: #c89b3c;
+        }
+        
+        /* Macclesfield Info */
+        .location-info {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .location-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .location-text {
+            flex: 1;
+            min-width: 300px;
+            text-align: left;
+            padding: 20px;
+        }
+        
+        .location-map {
+            flex: 1;
+            min-width: 300px;
+            background: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 20px;
+        }
+        
+        .map-placeholder {
+            background: #2a2a2a;
+            height: 300px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #c89b3c;
+            font-size: 18px;
+        }
+        
+        /* Newsletter Section */
+        .newsletter {
+            padding: 80px 0;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3') no-repeat center center/cover;
+            text-align: center;
+        }
+        
+        .newsletter-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            font-size: 16px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #5e2c2c;
+        }
+        
+        .social-links {
+            margin-bottom: 20px;
+        }
+        
+        .social-links a {
+            color: #e0e0e0;
+            font-size: 24px;
+            margin: 0 15px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #c89b3c;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .location-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo">Johnny Depp</a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#tour">Tour</a></li>
+                    <li><a href="#location">Macclesfield</a></li>
+                    <li><a href="#newsletter">Updates</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Johnny Depp Live 2025</h1>
+            <p>One Night Only in Macclesfield, UK</p>
+            <a href="#tour" class="btn">Tour Information</a>
+        </div>
+    </section>
+
+    <!-- Tour Date Section -->
+    <section id="tour" class="tour-date">
+        <div class="container">
+            <h2 class="section-title">2025 Tour Date</h2>
+            <div class="date-card">
+                <div class="date-header">
+                    <h3>Macclesfield, UK</h3>
+                    <p>June 15, 2025</p>
+                </div>
+                <div class="date-body">
+                    <p><i class="fas fa-map-marker-alt"></i> Macclesfield Heritage Centre</p>
+                    <p><i class="fas fa-clock"></i> 7:30 PM (Doors open at 6:30 PM)</p>
+                    <p><i class="fas fa-ticket-alt"></i> Loyalty ID card £1500</p>
+                    <p><i class="fas fa-music"></i> An intimate evening of music and stories</p>
+                    <a href="https://t.me/official01627" class="btn">Buy Tickets Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Macclesfield Info -->
+    <section id="location" class="location-info">
+        <div class="container">
+            <h2 class="section-title">About Macclesfield</h2>
+            <div class="location-content">
+                <div class="location-text">
+                    <p>Macclesfield is a historic market town in Cheshire, England, known for its silk heritage and stunning countryside views.</p>
+                    <p>Johnny Depp has chosen this intimate venue for a special performance that will feature music from his career along with personal storytelling.</p>
+                    <p>The Macclesfield Heritage Centre provides an ideal setting for this unique event, with excellent acoustics and a capacity that ensures an intimate experience for all attendees.</p>
+                    <p>For those traveling to Macclesfield, the town offers excellent transport links, quality accommodation, and a variety of dining options to make your visit memorable.</p>
+                </div>
+                <div class="location-map">
+                    <h3>Venue Location</h3>
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i> Macclesfield Heritage Centre, Macclesfield SK10 1EA, UK
+                    </div>
+                    <p style="margin-top: 20px;">The venue is easily accessible by train (Macclesfield Station) and by car via the A523.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Stay Updated</h2>
+            <p>Subscribe for exclusive updates and pre-sale ticket access</p>
+            <form class="newsletter-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-spotify"></i></a>
+            </div>
+            <p>&copy; 2023 Johnny Depp. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission handling
+        const form = document.querySelector('.newsletter-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing to Johnny Depp updates!');
+            form.reset();
+        });
+    </script>
+</body>
+</html>
